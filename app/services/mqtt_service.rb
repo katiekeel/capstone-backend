@@ -11,9 +11,13 @@ class MqttService
 
   def connect_to_broker
     @client.connect() do |c|
-      c.get('test') do |topic, message|
-        puts "#{topic}: #{message}"
+      c.get('test') do |tank, level|
+        puts "#{tank}: #{level}"
+        Tank.update_tank(tank, level)
+        puts Tank.find_by(number: tank).level
       end
     end
+    @client.disconnect()
   end
+
 end
