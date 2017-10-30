@@ -9,10 +9,16 @@ gem 'rails', '~> 5.1.4'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'mqtt'
+gem 'active_model_serializers'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'awesome_print'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers'
 end
 
 group :development do
