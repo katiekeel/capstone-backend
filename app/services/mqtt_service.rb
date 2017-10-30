@@ -17,7 +17,6 @@ class MqttService
       @client.get( 'a/b' ) do |tank, level|
         puts "#{tank}: #{level}"
         Tank.from_mqtt(tank, level)
-        @client.disconnect()
       end
     end
   end

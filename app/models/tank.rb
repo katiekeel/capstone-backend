@@ -1,12 +1,12 @@
 class Tank < ApplicationRecord
 
-  validates_presence_of :number, :level
+  validates_presence_of :name, :level
 
-  def self.from_mqtt(tank, level)
-    tank = self.find_or_create_by!(number: tank) do |tank|
-      tank.level = level
+  def self.from_mqtt(name, level)
+    tank = self.find_or_create_by!(name: name) do |tank|
+      tank.level = level.to_i
     end
-    tank.update_attributes!(level: level)
+    tank.update_attributes!(level: level.to_i)
     tank
   end
 
