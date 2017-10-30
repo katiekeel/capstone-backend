@@ -14,10 +14,10 @@ RSpec.describe Tank, type: :model do
       expect(tank.number).to eq "1"
       expect(tank.level).to eq "2"
 
-      same_tank = Tank.from_mqtt(1, 3)
-      byebug
-      expect(same_tank.number).to eq "1"
-      expect(same_tank.level).to eq "3"
+      tank = Tank.from_mqtt(1, 3)
+
+      expect(tank.number).to eq "1"
+      expect(tank.level).to eq "3"
     end
   end
 end
