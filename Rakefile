@@ -4,3 +4,11 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+def running_tasks
+  @running_tasks ||= Rake.application.top_level_tasks
+end
+
+def is_running_migration?
+  running_tasks.include?("db:migrate")
+end
