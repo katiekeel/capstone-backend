@@ -1,0 +1,7 @@
+tom2white/home/garden5/0
+weatherstation_onqal/temperature_inside
+weatherstation_onqal/temperature_outside
+chezEnrique/Garage1/Test/Humidity
+chezEnrique/Garage1/Test/Temperature
+7133egyptian/evse/watthourstotal
+owntracks/#
