@@ -10,6 +10,7 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'mqtt'
 gem 'active_model_serializers'
+gem 'redis'
 
 
 group :development, :test do

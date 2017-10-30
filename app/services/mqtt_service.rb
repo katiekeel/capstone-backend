@@ -1,6 +1,3 @@
-# need to subscribe to every topic
-# then can call get without args
-
 class MqttService
 
   def initialize
@@ -17,7 +14,8 @@ class MqttService
   end
 
   def subscribe
-    @client.subscribe('a/b')
+    @client.subscribe('DCML01')
+    @client.subscribe('DCML02')
   end
 
   def receive

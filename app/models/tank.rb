@@ -7,6 +7,7 @@ class Tank < ApplicationRecord
       tank.level = level.to_i
     end
     tank.update_attributes!(level: level.to_i)
+    after_commit { TankRelayJob.perform_later(tank) }
     tank
   end
 
