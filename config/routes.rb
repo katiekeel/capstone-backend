@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root to: "welcome#show"
+  get "/api/v1/tanks", to: "api/v1/tanks#index"
+  get "/", to: "welcome#show"
 end

@@ -1,7 +1,9 @@
 class Tank < ApplicationRecord
 
-  def self.update_tank(tank, level)
-    find_by(number: tank)
+  def self.from_mqtt(tank, level)
+    find_or_create_by(number: tank) do |tank|
+      tank.level = level
+    end
   end
 
 end

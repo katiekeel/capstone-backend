@@ -13,9 +13,12 @@ class MqttService
   end
 
   def subscribe
-    # @client.subscribe( '#' )
-    @client.get( 'owntracks/mario_e/marlin' ) do |topic, message|
-      puts "#{topic}: #{message}"
+    Thread.new do
+      @client.get( 'a/b' ) do |tank, level|
+        puts "#{tank}: #{level}"
+        Tank.from_mqtt(tank, level)
+        @client.disconnect()
+      end
     end
   end
 

@@ -1,7 +1,21 @@
+Tom White's Garden
+
 tom2white/home/garden5/0
+
+Mysterious Weather Station:
+
 weatherstation_onqal/temperature_inside
 weatherstation_onqal/temperature_outside
+
+Enrique's House
+
 chezEnrique/Garage1/Test/Humidity
 chezEnrique/Garage1/Test/Temperature
+
+Egyptian House? - "turn the lights off" dad
+
 7133egyptian/evse/watthourstotal
+
+Where someone is...
+
 owntracks/#
