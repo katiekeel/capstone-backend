@@ -1,3 +1,6 @@
+# need to subscribe to every topic
+# then can call get without args
+
 class MqttService
 
   def initialize
@@ -10,11 +13,16 @@ class MqttService
   def connect_to_broker
     @client.connect()
     subscribe
+    receive
   end
 
   def subscribe
+    @client.subscribe('a/b')
+  end
+
+  def receive
     Thread.new do
-      @client.get( 'a/b' ) do |tank, level|
+      @client.get do |tank, level|
         puts "#{tank}: #{level}"
         Tank.from_mqtt(tank, level)
       end
