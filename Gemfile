@@ -8,9 +8,9 @@ end
 gem 'rails', '~> 5.1.4'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
-gem 'mqtt'
+gem 'mqttx', :git => 'https://github.com/tierconnect/ruby-mqtt.git'
 gem 'active_model_serializers'
-gem 'redis', "~> 3.0" 
+gem 'redis', "~> 3.0"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

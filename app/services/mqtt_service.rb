@@ -1,16 +1,15 @@
 class MqttService
 
   def initialize
-    @client = MQTT::Client.connect(
-      :host => 'm2m.eclipse.org',
-      :port => 1883,
-    )
+    @client = MQTT::Client.new({
+      :remote_host => 'm2m.eclipse.org',
+      :remote_port => 1883,
+      :reconnect => true
+    })
   end
 
   def connect_to_broker
-    @client.connect(
-      :keep_alive => 0
-    )
+    @client.connect()
     subscribe
     receive
   end
