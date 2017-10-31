@@ -16,6 +16,8 @@ class MqttService
   def subscribe
     @client.subscribe('DCML01')
     @client.subscribe('DCML02')
+    @client.subscribe('weatherstation_onqal/temperature_outside')
+    @client.subscribe('tom2white/home/garden5/0')
   end
 
   def receive

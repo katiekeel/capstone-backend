@@ -10,8 +10,7 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'mqtt'
 gem 'active_model_serializers'
-gem 'redis'
-
+gem 'redis', "~> 3.0" 
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
