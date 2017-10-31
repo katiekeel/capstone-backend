@@ -8,7 +8,9 @@ class MqttService
   end
 
   def connect_to_broker
-    @client.connect()
+    @client.connect(
+      :keep_alive => 0
+    )
     subscribe
     receive
   end
