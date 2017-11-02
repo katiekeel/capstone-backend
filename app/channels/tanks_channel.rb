@@ -1,7 +1,8 @@
 class TanksChannel < ApplicationCable::Channel
   def follow
     stop_all_streams
-    stream_from "tanks"
+    tanks = Tank.all
+    stream_for tanks
   end
 
   def unfollow

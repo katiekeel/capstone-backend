@@ -19,6 +19,8 @@ class MqttService
     @client.subscribe('DCML02')
     @client.subscribe('weatherstation_onqal/temperature_outside')
     @client.subscribe('tom2white/home/garden5/0')
+    @client.subscribe('7133egyptian/evse/watthourstotal')
+    @client.subscribe('chezEnrique/Garage1/Test/Temperature')
   end
 
   def receive
@@ -26,6 +28,7 @@ class MqttService
       @client.get do |tank, level|
         puts "#{tank}: #{level}"
         Tank.from_mqtt(tank, level)
+        puts Time.now
       end
     end
   end
