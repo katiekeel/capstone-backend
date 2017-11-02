@@ -1,6 +1,6 @@
 redis: &redis
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://h:p04dbb0010bd24ed8e54a69fbebb513d5b49a10b6c6cd4d96e1e26f30b37e140b@ec2-34-235-35-224.compute-1.amazonaws.com:64769
 
 production: *redis
 development: *redis
