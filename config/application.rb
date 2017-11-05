@@ -30,7 +30,7 @@ module Capstone
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = false
     config.action_dispatch.default_headers = {
-      'Access-Control-Allow-Origin' => 'http://localhost:3001',
+      'Access-Control-Allow-Origin' => '*',
       'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
     }
   end
