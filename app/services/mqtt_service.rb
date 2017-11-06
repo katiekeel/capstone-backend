@@ -1,5 +1,7 @@
 class MqttService
 
+  attr_reader :client
+
   def initialize
     @client = MQTT::Client.new({
       :remote_host => 'm2m.eclipse.org',
