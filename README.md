@@ -18,6 +18,8 @@ Messages from the broker have a tank name/id and a level/% full datapoint. When 
 2. sends a background worker to broadcast the new data over the ActionCable socket
 3. tells ActionCable to broadcast the new data when there are sufficient resources (usually instantaneously).
 
+The data stream can also be accessed by the normal api/v1/etc. system. The current frontend implements this method.
+
 ## Contributing
 
 Potential areas of help:
@@ -35,6 +37,8 @@ To get set up:
 And, in a separate tab:
 
 `$ redis-server`
+
+Note: you'll need to have Redis installed on your system as well. More information [here](https://redis.io/download).
 
 ## Further information and architecture decision resources:
 
