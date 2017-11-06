@@ -31,7 +31,7 @@ To get set up:
 
 `$ git clone git@github.com:katiekeel/capstone-backend.git your-directory`  
 `$ cd your-directory`  
-`$ bundle`
+`$ bundle`  
 `$ rails s`
 
 And, in a separate tab:
