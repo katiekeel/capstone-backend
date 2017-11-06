@@ -26,6 +26,7 @@ Potential areas of help:
 
 * a better solution than `Thread.new` for concurrency in Rails - a background worker didn't seem correct for keeping a connection open, and EventMachine appears to be somewhat outdated. Right now it works, but if we start to receive large volumes of messages, this solution won't hold.  
 * Testing ActionCable - apparently this isn't really yet a thing, but I'd love ideas.
+* Better testing for the MQTT service.
 
 To get set up:
 
@@ -38,7 +39,11 @@ And, in a separate tab:
 
 `$ redis-server`
 
-Note: you'll need to have Redis installed on your system as well. More information [here](https://redis.io/download).
+Note: you'll need to have Redis installed on your system as well. More information [here](https://redis.io/download).  
+
+To run the test suite:  
+
+`$ rspec`  
 
 ## Further information and architecture decision resources:
 
